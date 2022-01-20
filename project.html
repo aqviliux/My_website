@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Akvile website</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script src="project_js.js"></script>
+</head>
+
+<body onload="init()">
+
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./blog.html">About orchids</a>
+        <a class="active" href="./project.html">My projects</a>
+        <input type="text" placeholder="Search.." name="search">
+    </div>
+
+
+    <!--add inputfield to get circle radius in meters and return circle area.-->
+    <h3>Let's play!!! Can we calculate circle area??</h3>
+
+    <div>
+        <p>Please write a circle radius in meters in the field ;) </p>
+        <label for="radius">Circle radius in meters:</label>
+        <input type="text" name="radius" id="circradius" />
+        <button id="bttcalc" onclick="circleArea()">Calculate circle area</button>
+        <br/>
+        <p id="getArea"></p>
+    </div>
+    <!-- add inputfield to get circle radius in meters and return circle area.-->
+
+
+
+    <!--aditional homework- add input color and change according it.-->
+
+    <h3>Let's play!!! Want to change color??</h3>
+    <div>
+        <p id="chColorText">Please choose the color in which do you want to change the color of this text. There are all CSS colors in the list.
+            ;)
+        </p>
+        <select id="selectColors" onChange="updateColor()">
+        </select>
+    </div>
+    <!-- add input color and change according it-->
+
+
+    <!-- add dynamical list-->
+    <h3>Let's play!!! Add dynamical list of Lithuania cities?</h3>
+    <div>
+        <p> There you find a list of Lithuania cities. </p>
+        <ul id="citieslist"></ul>
+        <button id="bttdisplaylist" onclick="displayList()">Display list</button>
+
+    </div>
+    <!-- add add dynamical list-->
+
+    <!-- add input field for the dynamical list-->
+    <div>
+        <p>You can add new city using input field.</p>
+        <label for="city">New city:</label>
+        <input type="text" name="city" id="addcity" />
+        <button id="bttaddcity" onclick="addedCity()">Add new city</button>
+        <br/>
+    </div>
+    <br/>
+
+    <!-- compare two different arrays-->
+    <h3>Let's play!!! What can we do with arrays?</h3>
+    <div>
+        <button id="bttshow" onclick="showArrays()">We have two arrays of cities.</button>
+        <p id="showArrays"></p>
+        <p id="showArrays2"></p>
+        <br/>
+        <button id="bttreverse" onclick="reverseArrays()">We have reversed array.</button>
+        <p id="showArrays3"></p>
+        <br/>
+        <button id="bttstrinArr" onclick="arrayToString()">We change first array to a string.</button>
+        <p id="showArrays4"></p>
+        <br/>
+        <button id="bttcheck" onclick="compCities()">we have an array with unique values from two arrays.</button>
+        <p id="showArrays5"></p>
+        <br/>
+    </div>
+    <br/>
+    <br/>
+
+    <!-- add digital clock-->
+    <h3>Let's play!!! Check your time!!!</h3>
+    <div>
+        <p>Current time in Switzerland</p>
+        <div class="clock" id="clock"></div>
+    </div>
+
+    <br/>
+
+    <!--add input field for date-->
+    <div>
+        <p>You can change date for the countdown.</p>
+        <label for="nDate">New date:</label>
+        <input type="text" name="nDate" id="addnDate" />
+        <button id="bttrunCountd" onclick="runCountDown()">run countdown function</button>
+        <br/>
+        <div class="clock" id="coountd"></div>
+        <br/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</body>
+
+</html>

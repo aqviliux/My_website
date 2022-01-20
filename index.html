@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Akvile website</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script src="index_js.js"></script>
+</head>
+
+<body onload="init()">
+
+    <div class="topnav">
+        <a class="active" href="./index.html">Home</a>
+        <a href="./blog.html">About orchids</a>
+        <a href="./project.html">My projects</a>
+        <input type="text" placeholder="Search.." name="search">
+    </div>
+
+    <h1>Welcome to my website!</h1>
+
+    <div class="about-me">
+        <img class="profile-photo" src="./images/IMG_3.JPG" alt="I am" />
+        <p>I am Akvilė. I am 36 years old. I come from Lithuania. I and my family are here for more than 4 years. I really love
+            Switzerland. I studied in Vilnius University in Mathematics Informatics faculty. Later I worked in a bank for
+            five years. After that I decided to become a programmer and worked with SQL databases. And one day we as a family
+            decided to come to Switzerland and check - is it as nice as we hear ;) </p>
+    </div>
+
+    <br/>
+    <p>You can find more information about Lithuania here</p>
+    <a href="https://en.wikipedia.org/wiki/Lithuania" target="_blank">...more about Lithuania</a>
+    <p>or just watch this ;) </p>
+    <br>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/WH9mTk1mxkI?controls=1">
+    </iframe>
+
+    <!-- button which counts clicks.-->
+    <div>
+        <p>I want to find how many people want to know more about Lithuania. Please press a button if you want to find more
+            informations in my website about Lithuania. Thank you! </p>
+        <button class="button" onclick="counterAll()">Press button if you want to get more information about Lithuania</button>
+
+    </div>
+    <!--button which counts clicks.-->
+
+
+    <h3>My hobbies</h3>
+    <ol>
+        <li>books</li>
+        <li>orchids</li>
+        <li>gardening</li>
+    </ol>
+    <br/>
+
+
+    <div>
+        <img class="orch-img" src="./images/IMG_7965.JPG" alt="One of them" />
+        <img class="orch-img" src="./images/IMG_8014.JPG" alt="One of them" />
+        <img class="orch-img" src="./images/IMG_8674.JPG" alt="One of them" />
+    </div>
+
+    <div class="about-orchids">
+        <h3>My favorite species of orchids</h3>
+        <ul>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Psychopsis" target="_blank">Psychopsis</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Phalaenopsis" target="_blank">Phalaenopsis</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Angraecum" target="_blank">Angraecum</a>
+            </li>
+        </ul>
+        <br/>
+    </div>
+
+    <p>I would like to know which species of orchids do you like. Please check few choices from the table.</p>
+    <form>
+
+        <input type="checkbox" id="orchid1" name="orchid1" value="Phalaenopsis">
+        <label for="orchid1"> Phalaenopsis</label>
+        <br>
+
+        <input type="checkbox" id="orchid2" name="orchid2" value="Cattleya">
+        <label for="orchid2"> Cattleya</label>
+        <br>
+
+        <input type="checkbox" id="orchid3" name="orchid3" value="Vanda">
+        <label for="orchid3"> Vanda</label>
+        <br>
+
+        <input type="checkbox" id="orchid4" name="orchid4" value="Catasetum">
+        <label for="orchid4"> Catasetum</label>
+        <br>
+
+        <input type="checkbox" id="orchid5" name="orchid5" value="Oncidium">
+        <label for="orchid5"> Oncidium</label>
+        <br>
+
+        <input type="checkbox" id="orchid6" name="orchid6" value="Dendrobium">
+        <label for="orchid6"> Dendrobium</label>
+        <br>
+        <input type="checkbox" id="orchid7" name="orchid7" value="None">
+        <label for="orchid7"> None</label>
+        <br>
+        <br>
+        <input type="submit" value="Submit" />
+    </form>
+    <br/>
+    <div>
+        <img src="./images/family_photo.JPG" alt="My family" width="200" />
+        <p>I am here with my family. My husband works in IT. He is really happy in this position. I take care of our children,
+            home. Also I am learning new things to find new path in my life. My children go in the school and kindergarden.</p>
+        <h3>My family data</h3>
+        <table>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <tr>
+                <td>Ricardas</td>
+                <td>Male</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td>Akvile</td>
+                <td>Female</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Steponas</td>
+                <td>Male</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Adele</td>
+                <td>Female</td>
+                <td>5</td>
+            </tr>
+        </table>
+        <br/>
+    </div>
+    <br/>
+
+    <!-- button what hide or show member-info class.-->
+    <div>
+        <p>You can get more information about our family by pressing this button. </p>
+        <button id="bttchange" class="button" onclick="hideShowDiv()">Press to get more information about my family.</button>
+
+    </div>
+
+    <div id="member-section" class="member-info">
+        <div class="member-info2">
+            <p>
+                <strong>Steponas </strong>likes drawing and painting. Also he likes LEGO and Gravitrax. Now he is passionate about
+                LEGO Technic and try to construct these machines. </p>
+        </div>
+
+        <p>You can check his best pictures here...</p>
+        <p>You can check his favorite LEGO here...</p>
+
+        <div class="member-info2">
+            <p>
+                <strong>Adele </strong> likes music and songs. She sings children's songs, plays with small dolls. Also she likes
+                to play a lot of role games. </p>
+        </div>
+        <p>You can find her favorite songs list here...</p>
+        <p>You can find some nice dolls here...</p>
+
+    </div>
+    <!-- button what hide or show member-info class.-->
+
+
+    <br/>
+    <br/>
+    <br/>
+    <div class="blog-entries">
+        <p>If you want to known more about my country, orchids, please write your email here and I will answer you.</p>
+        <form>
+            <label for="email">Your Email:</label>
+            <input type="text" name="email" />
+            <input type="submit" value="Submit" />
+        </form>
+        <br/>
+        <p>If you want, you can leave a review of my page.</p>
+        <form>
+            <label for="review">Review of Akvile website:</label>
+            <textarea id="review" name="review" rows="4" cols="50" placeholder="Please leave a review here..."></textarea>
+            <input type="submit" value="Submit" />
+        </form>
+        <br/>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+.topnav {
+    background-color: deepskyblue;
+    position: sticky;
+    top: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+    font-size: 17px;
+    display: inline-block;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(181, 217, 240);
+    color: black;
+}
+
+/* Addtv a color to the active/current link */
+.topnav a.active {
+    background-color: rgb(34, 169, 231); 
+    color: white;
+}
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 17px;
+    background-color: rgb(181, 217, 240);
+  }
+
+.topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+
+h1 {
+    font-stretch: extra-expanded;
+    font-weight: bold;
+    color: rgb(34, 169, 231);
+    text-shadow: 2px 2px 5px;
+}
+
+h3 {
+    margin-top: 3em;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-stretch: semi-expanded;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 720px;
+    background-color: rgb(197, 230, 245);
+    font-size: 1.1em;
+}
+
+table,th,td {
+    border: 1px solid black;
+    background-color: rgb(181, 217, 240);
+}
+
+p::first-letter {
+    font-size: 150%;
+    color: rgb(34, 169, 231); 
+  }
+
+button {
+    border-radius: 15px;
+    padding: 5px 20px;
+    background-color: rgb(181, 217, 240);
+}
+button:hover {
+    background-color: rgb(34, 169, 231); 
+    cursor: pointer;
+}
+
+.about-me {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me > p {
+    text-align: justify;
+}
+
+.profile-photo {
+    height: 250px;
+    margin-right: 16px;
+    border-radius: 25px;
+}
+
+
+.about-orchids {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.blog-entries {
+    font-size: 1.1em;
+    background-color: rgb(181, 217, 240); 
+}
+
+.orch-img {
+    width: 200px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.orch-img + .orch-img{
+    margin-left: 10px;
+
+}
+/* Create two equal columns that floats next to each other */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.flex-container > div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 15px;
+    flex-grow: 1;
+    
+}
+.info-orch {
+    text-align: justify;
+}
+.info-orch::selection {
+    color: deepskyblue;
+}
+
+/*-- #id nurodo id elementa. --*/
+
+h1::after {
+   /* content: url("./images/orchid.gif");*/
+    background-image: url("./images/orchid.gif");
+    background-size: 300px 200px;
+    display: inherit;
+    width: 300px; 
+    height: 200px;
+    content:"";
+  }
+
+.member-info2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.member-info2 + p {
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: underline;
+
+}
+
+
+  .button {
+    background-color: rgb(181, 217, 240);
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .clock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 160px;
+      width: 160px;
+      border-radius: 50%;
+      background-color: blue;
+      color: white;
+      font-weight: 600;
+  }
