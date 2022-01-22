@@ -4,55 +4,125 @@
 <head>
     <title>Akvile blog</title>
     <link href="./styles.css" rel="stylesheet" type="text/css">
+    <script src="./blog_js.js"></script>
 </head>
 
 
-<body>
+<body onload="init()">
 
     <div class="topnav">
         <a href="./index.html">Home</a>
         <a class="active" href="./blog.html">About orchids</a>
         <a href="./project.html">My projects</a>
-        <input type="text" placeholder="Search.." name="search">
+        <input type="search" id="query" name="q" placeholder="Search...">
+        <button id="searchbtn" onclick="submitted(event)">Search</button>
     </div>
 
 
     <h1>Welcome to my blog!</h1>
     <br/>
-    <p class="text">I describe my orchids here in the blog entry.</p>
 
-    <div class="blog-entries">
+    <h3>My hobbies</h3>
+    <ol>
+        <li>books</li>
+        <li>orchids</li>
+        <li>gardening</li>
+    </ol>
+    <br/>
+
+
+    <div>
+        <img class="orch-img" src="./images/IMG_7965.JPG" alt="One of them" />
+        <img class="orch-img" src="./images/IMG_8014.JPG" alt="One of them" />
+        <img class="orch-img" src="./images/IMG_8674.JPG" alt="One of them" />
+    </div>
+
+    <div class="about-orchids">
+        <h3>My favorite species of orchids</h3>
+        <ul>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Psychopsis" target="_blank">Psychopsis</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Phalaenopsis" target="_blank">Phalaenopsis</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Angraecum" target="_blank">Angraecum</a>
+            </li>
+        </ul>
         <br/>
-        <p>You could check few names of orchids about which would you like to know more ;)</p>
+    </div>
+
+
+
+
+    <div>
+
+        <p>I would like to know which species of orchids do you like. Please check few choices from the table.</p>
         <form>
-            <input type="checkbox" id="orchid1" name="orchid1" value="Phalaenopsis">
-            <label for="orchid1"> Phalaenopsis</label>
+
+            <input type="checkbox" id="orchid1" name="orchid" value="Phalaenopsis">
+            <label class="blog-entries" for="orchid1"> Phalaenopsis</label>
+            <br>
+            <input type="checkbox" id="orchid2" name="orchid" value="Cattleya">
+            <label class="blog-entries" for="orchid2"> Cattleya</label>
+            <br>
+            <input type="checkbox" id="orchid3" name="orchid" value="Vanda">
+            <label class="blog-entries" for="orchid3"> Vanda</label>
+            <br>
+            <input type="checkbox" id="orchid4" name="orchid" value="Catasetum">
+            <label class="blog-entries" for="orchid4"> Catasetum</label>
+            <br>
+            <input type="checkbox" id="orchid5" name="orchid" value="Oncidium">
+            <label class="blog-entries" for="orchid5"> Oncidium</label>
+            <br>
+            <input type="checkbox" id="orchid6" name="orchid" value="Dendrobium">
+            <label class="blog-entries" for="orchid6"> Dendrobium</label>
+            <br>
+            <input type="checkbox" id="orchid7" name="orchid" value="None">
+            <label class="blog-entries" for="orchid7"> None</label>
+            <br>
             <br>
 
-            <input type="checkbox" id="orchid2" name="orchid2" value="Cattleya">
-            <label for="orchid2"> Cattleya</label>
-            <br>
-
-            <input type="checkbox" id="orchid3" name="orchid3" value="Vanda">
-            <label for="orchid3"> Vanda</label>
-            <br>
-
-            <input type="checkbox" id="orchid4" name="orchid4" value="Catasetum">
-            <label for="orchid4"> Catasetum</label>
-            <br>
-
-
-            <input type="checkbox" id="orchid5" name="orchid5" value="Oncidium">
-            <label for="orchid5"> Oncidium</label>
-            <br>
-
-            <input type="checkbox" id="orchid6" name="orchid6" value="Dendrobium">
-            <label for="orchid6"> Dendrobium</label>
-            <br>
-            <br>
-            <input type="submit" value="Submit" />
         </form>
 
+        <button class="button" onclick="loadResultsFavOrchids()">Save your choices and check others</button>
+        <br>
+        <br>
+        <div id="result-table">
+            <table>
+                <th>Type of Orchid</th>
+                <th>Counter</th>
+                <tr>
+                    <td>Phalaenopsis</td>
+                    <td id="check1"></td>
+                </tr>
+                <tr>
+                    <td>Cattleya</td>
+                    <td id="check2"></td>
+                </tr>
+                <tr>
+                    <td>Vanda</td>
+                    <td id="check3"></td>
+                </tr>
+                <tr>
+                    <td>Catasetum</td>
+                    <td id="check4"></td>
+                </tr>
+                <tr>
+                    <td>Oncidium</td>
+                    <td id="check5"></td>
+                </tr>
+                <tr>
+                    <td>Dendrobium</td>
+                    <td id="check6"></td>
+                </tr>
+                <tr>
+                    <td>None</td>
+                    <td id="check7"></td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 

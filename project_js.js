@@ -62,7 +62,6 @@ const CSS_COLOR_NAMES = [
     "YellowGreen",
 ];
 
-
 function allColors() {
     let select = document.getElementById("selectColors");
     for (var i = 0; i < CSS_COLOR_NAMES.length; i++) {
@@ -74,7 +73,6 @@ function allColors() {
     };
 };
 
-
 function updateColor() {
     var select = document.getElementById("selectColors");
     var option = select.options[select.selectedIndex];
@@ -83,7 +81,7 @@ function updateColor() {
 };
 
 
-/* add dynamic list */
+/*add dynamic list */
 var places = ["Vilnius", "Kaunas", "Siauliai", "Klaipeda", "Taurage", "Utena"];
 
 function displayList() {
@@ -95,9 +93,10 @@ function displayList() {
         ul.appendChild(li);
     }
 };
-/* add dynamic list */
+/*add dynamic list */
 
-/* add input field for the dynamic list */
+
+/*add input field for the dynamic list */
 let city = "";
 
 function addedCity() {
@@ -117,11 +116,11 @@ function addCity(newcity) {
     places.push(newcity);
 };
 
-/* add input field for the dynamic list */
+/*add input field for the dynamic list */
 
 
 
-/* add clock */
+/*add clock */
 var myTime = setInterval(showTime, 1000);
 
 function showTime() {
@@ -129,10 +128,10 @@ function showTime() {
     let t = time.toLocaleTimeString();
     document.getElementById("clock").innerHTML = t;
 };
-/* add clock */
+/*add clock */
 
 
-/* two arrays as input, compare it and find unique values */
+/*two arrays as input, compare it and find unique values */
 
 var places2 = ["Vilnius", "Kaunas", "Radviliskis", "Palanga", "Taurage", "Panevezys", "Vilkaviskis"];
 
@@ -172,7 +171,6 @@ function concArray(list2) {
             oneString = oneString + list2[i].toString();
         }
     };
-
     return oneString;
 };
 
@@ -221,7 +219,7 @@ function showCountTime(aDate) {
     deltaTime -= minutes * 60;
     var seconds = Math.ceil(deltaTime % 60);
 
-    document.getElementById("coountd").innerHTML = days + "d " + hours + "h "
+    document.getElementById("countd").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
     return ((addDate - currentDate) / 1000);
 
@@ -239,7 +237,7 @@ function runCountDown() {
             const distance = showCountTime(addDate);
             if (distance < 0) {
                 clearInterval(interval);
-                document.getElementById("coountd").innerHTML = "TIME'S UP!";
+                document.getElementById("countd").innerHTML = "TIME'S UP!";
             };
         }, 1000);
     }
@@ -254,4 +252,17 @@ function addFutureDate() {
     var futureDate = currentDate.setSeconds(currentDate.getSeconds() + 40);
     var t = new Date(futureDate);
     document.getElementById("addnDate").value = t.toLocaleString();
+};
+
+
+/* add search in my website using google site */
+const google = "https://www.google.com/search?q=site%3A+";
+const site = "akvilejwebsite.netlify.app";
+
+function submitted(event) {
+    event.preventDefault();
+    const q = document.getElementById("query");
+    const url = google + site + "+" + q.value;
+    const win = window.open(url, "_blank");
+    win.focus();
 };

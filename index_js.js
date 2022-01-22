@@ -1,6 +1,7 @@
 const page = {
     isSectionVisible: true
 };
+
 /* functions which runs on body load*/
 function init() {
     updateSection();
@@ -25,7 +26,6 @@ function counter() {
 /* remove clickcount 
 function cleanUp() {
     localStorage.clear();
-
 }*/
 
 
@@ -46,3 +46,15 @@ function updateSection() {
     }
 };
 
+
+/* add search in my website using google site */
+const google = "https://www.google.com/search?q=site%3A+";
+const site = "akvilejwebsite.netlify.app";
+
+function submitted(event) {
+    event.preventDefault();
+    const q = document.getElementById("query");
+    const url = google + site + "+" + q.value;
+    const win = window.open(url, "_blank");
+    win.focus();
+};

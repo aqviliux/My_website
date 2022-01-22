@@ -13,11 +13,12 @@
         <a href="./index.html">Home</a>
         <a href="./blog.html">About orchids</a>
         <a class="active" href="./project.html">My projects</a>
-        <input type="text" placeholder="Search.." name="search">
+        <input type="search" id="query" name="q" placeholder="Search...">
+        <button id="searchbtn" onclick="submitted(event)">Search</button>
     </div>
 
 
-    <!--add inputfield to get circle radius in meters and return circle area.-->
+    <!-- add inputfield to get circle radius in meters and return circle area.-->
     <h3>Let's play!!! Can we calculate circle area??</h3>
 
     <div>
@@ -32,9 +33,10 @@
 
 
 
-    <!--aditional homework- add input color and change according it.-->
+    <!-- add input color and change according it.-->
 
     <h3>Let's play!!! Want to change color??</h3>
+
     <div>
         <p id="chColorText">Please choose the color in which do you want to change the color of this text. There are all CSS colors in the list.
             ;)
@@ -45,7 +47,7 @@
     <!-- add input color and change according it-->
 
 
-    <!-- add dynamical list-->
+    <!--  add dynamical list-->
     <h3>Let's play!!! Add dynamical list of Lithuania cities?</h3>
     <div>
         <p> There you find a list of Lithuania cities. </p>
@@ -53,9 +55,9 @@
         <button id="bttdisplaylist" onclick="displayList()">Display list</button>
 
     </div>
-    <!-- add add dynamical list-->
+    <!--  add add dynamical list-->
 
-    <!-- add input field for the dynamical list-->
+    <!--  add input field for the dynamical list-->
     <div>
         <p>You can add new city using input field.</p>
         <label for="city">New city:</label>
@@ -63,6 +65,7 @@
         <button id="bttaddcity" onclick="addedCity()">Add new city</button>
         <br/>
     </div>
+
     <br/>
 
     <!-- compare two different arrays-->
@@ -94,14 +97,14 @@
 
     <br/>
 
-    <!--add input field for date-->
+    <!-- add input field for date-->
     <div>
         <p>You can change date for the countdown.</p>
         <label for="nDate">New date:</label>
         <input type="text" name="nDate" id="addnDate" />
         <button id="bttrunCountd" onclick="runCountDown()">run countdown function</button>
         <br/>
-        <div class="clock" id="coountd"></div>
+        <div class="clock" id="countd"></div>
         <br/>
     </div>
     <br/>
