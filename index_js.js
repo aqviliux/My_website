@@ -49,7 +49,7 @@ function updateSection() {
 
 /* add search in my website using google site */
 const google = "https://www.google.com/search?q=site%3A+";
-const site = "akvilejwebsite.netlify.app";
+const site = "https://akvilej-website.netlify.app";
 
 function submitted(event) {
     event.preventDefault();
