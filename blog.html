@@ -5,14 +5,15 @@
         <!--adapt screen to mobile devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Akvile website</title>
-        <link href="./styles.css" rel="stylesheet" type="text/css" />
+        <link href="./styles.css" rel="stylesheet" />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
             rel="stylesheet"
         />
     </head>
 
-    <body>
+    <body onload="init()">
         <nav class="topnav">
             <a href="./index.html">About myself</a>
             <a class="active" href="./blog.html">About orchids</a>
@@ -23,7 +24,7 @@
         <h1>Welcome to my blog!</h1>
         <br />
 
-        <h3>My hobbies</h3>
+        <h2>My hobbies</h2>
         <ol>
             <li>orchids</li>
             <li>books</li>
@@ -31,31 +32,8 @@
         </ol>
         <br />
 
-        <div class="flex-container">
-            <img
-                class="orch-img"
-                src="./images/IMG_7965.JPG"
-                alt="One of them"
-            />
-            <img
-                class="orch-img"
-                src="./images/IMG_8014.JPG"
-                alt="One of them"
-            />
-            <img
-                class="orch-img"
-                src="./images/IMG_8674.JPG"
-                alt="One of them"
-            />
-            <img
-                class="orch-img"
-                src="./images/IMG_5620.JPG"
-                alt="One of them"
-            />
-        </div>
-        <br />
         <div class="about-orchids">
-            <h3>My favorite species of orchids</h3>
+            <h2>My favorite species of orchids</h2>
             <ul>
                 <li>
                     <a
@@ -81,6 +59,8 @@
             </ul>
             <br />
         </div>
+
+        <h2>Information about some spiecies of the orchids</h2>
 
         <div class="flex-container">
             <div class="flex_child">
@@ -164,5 +144,43 @@
                 </p>
             </div>
         </div>
+
+        <h2>Photos of my orchids</h2>
+
+        <div class="image-gallery">
+            <img
+                class="gall-img orch-img active"
+                src="./images/IMG_7965.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_8014.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_8674.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_5620.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_5601.JPG"
+                alt="One of them"
+            />
+        </div>
+        <div class="btns">
+            <button class="btn prev">Prev</button>
+            <!--<button  disabled="" class="btn prev">Prev</button>-->
+            <button class="btn next">Next</button>
+        </div>
+
+        <br />
+        <script src="blog_js.js"></script>
     </body>
 </html>

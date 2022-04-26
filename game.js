@@ -3,9 +3,10 @@ let cards;
 function init() {
     cards = shuffle(hardcodedimg);
     updateMixedImages();
-    printStatus();
-    updateCardsUI();
+    // // boardStatus();
+    // updateCardsUI();
 }
+
 function updateMixedImages() {
     var x = document.getElementById("gridDIV").querySelectorAll(".memoryimg");
     for (i = 0; i < x.length; i++) {
@@ -81,15 +82,16 @@ function pick(cardNo) {
     if (selectedCards.length > 1) {
         checkEqual();
     }
-
-    output = printStatus();
+    output = boardStatus();
 
     if (output.every(checkFound)) {
         const x = document.createElement("h3");
         const list = x.classList;
         x.innerText = "Congratulations!!!";
         list.add("letCelebrate");
-        document.body.appendChild(x);
+        let div = document.getElementById("gridDIV");
+        div.insertAdjacentElement("beforebegin", x);
+        //document.body.appendChild(x);
     }
 }
 
@@ -129,8 +131,7 @@ function resolveCardStatus(index) {
     return "closed";
 }
 
-//this function is not necessary....
-function printStatus() {
+function boardStatus() {
     const output = cards.map(function (card, index) {
         return resolveCardStatus(index);
     });

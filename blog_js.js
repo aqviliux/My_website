@@ -1,46 +1,42 @@
-/* functions which runs on body load*/
 function init() {
-    hideTable();
+    prevBtn.addEventListener("click", function () {
+        previous();
+    });
+
+    nextBtn.addEventListener("click", function () {
+        next();
+    });
 }
 
-/* function which gets selected checkbox values*/
-function loadResultsFavOrchids() {
-    var markedCheckbox = document.getElementsByName("orchid");
-    for (var checkbox of markedCheckbox) {
-        if (checkbox.checked) {
-            var cv = checkbox.value;
-            if (localStorage.getItem(cv)) {
-                var count = Number(localStorage.getItem(cv)) + 1;
-                localStorage.setItem(cv, count);
-            } else {
-                localStorage.setItem(cv, 1);
-            }
-        }
+let currSelected = 0;
+const allImages = document.querySelectorAll(".gall-img");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+console.log(allImages);
+// NodeList(5) [img.gall-img.orch-img.active,
+//      img.gall-img.orch-img, img.gall-img.orch-img, img.gall-img.orch-img, img.gall-img.orch-img]
+
+function previous() {
+    nextBtn.disabled = false;
+    let x = allImages[currSelected];
+    x.classList.remove("active");
+    currSelected = currSelected - 1;
+    let y = allImages[currSelected];
+    y.classList.add("active");
+    if (currSelected === 0) {
+        prevBtn.disabled = true;
     }
-
-    document.getElementById("result-table").style.display = "block";
-
-    document.getElementById("check1").innerHTML =
-        localStorage.getItem("Phalaenopsis") || 0;
-    document.getElementById("check2").innerHTML =
-        localStorage.getItem("Cattleya") || 0;
-    document.getElementById("check3").innerHTML =
-        localStorage.getItem("Vanda") || 0;
-    document.getElementById("check4").innerHTML =
-        localStorage.getItem("Catasetum") || 0;
-    document.getElementById("check5").innerHTML =
-        localStorage.getItem("Oncidium") || 0;
-    document.getElementById("check6").innerHTML =
-        localStorage.getItem("Dendrobium") || 0;
-    document.getElementById("check7").innerHTML =
-        localStorage.getItem("None") || 0;
 }
 
-/* remove clickcount 
-function cleanUp() {
-    localStorage.clear();
-}*/
-
-function hideTable() {
-    document.getElementById("result-table").style.display = "none";
+function next() {
+    prevBtn.disabled = false;
+    let x = allImages[currSelected];
+    x.classList.remove("active");
+    currSelected = currSelected + 1;
+    let y = allImages[currSelected];
+    y.classList.add("active");
+    if (currSelected + 1 == allImages.length) {
+        nextBtn.disabled = true;
+    }
 }

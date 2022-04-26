@@ -72,13 +72,15 @@ h1 {
     font-stretch: extra-expanded;
     font-weight: bold;
     color: #0066ff;
-    text-shadow: 2px 2px 5px;
+    text-shadow: 2px 2px 2px;
 }
 
-/* h3 {
-    font-stretch: semi-expanded;
-    margin: 0;
-} */
+a {
+    text-decoration: none;
+}
+li {
+    font-size: 1.2rem;
+}
 
 table,
 th,
@@ -149,6 +151,37 @@ td {
     font-weight: 600;
 }
 
+/* CSS for slider in blog */
+.gall-img {
+    display: none;
+    max-height: 100%;
+    width: 300px;
+    height: 350px;
+}
+.active {
+    display: block;
+}
+.image-gallery {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden;
+    scroll-behavior: smooth;
+    transition: 5s ease-in; */
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:disabled {
+    background-color: #cce0ff;
+    cursor: not-allowed;
+}
+
 /* CSS for memory game */
 .grid_memory {
     display: grid;
@@ -216,19 +249,36 @@ td {
     text-transform: uppercase;
     animation: glow 2s ease-in-out infinite alternate;
     margin: auto;
-    position: fixed;
-    left: 30rem;
-    top: 30rem;
+    position: relative;
+    opacity: 0.7;
+    /* left: 30rem; */
+    /* top: 30rem; */
     /* bottom: 10rem;
     right: 10rem; */
 }
 
-@keyframes glow {
+/* @keyframes glow {
     from {
         text-shadow: 0 0 20px rgb(250, 247, 104);
+        top: 10px;
     }
     to {
         text-shadow: 0 0 20px rgb(245, 242, 72), 0 0 10px rgb(249, 245, 42);
         transform: rotateZ(360deg);
+        top: 400px;
     }
-}
+} */
+
+/* @keyframes glow {
+    0% {
+        text-shadow: 0 0 20px rgb(250, 247, 104);
+        left: 0;
+    }
+    48% {
+        left: calc(100% - 500px);
+    }
+    100% {
+        text-shadow: 0 0 20px rgb(245, 242, 72), 0 0 10px rgb(249, 245, 42);
+        left: 0;
+    }
+} */
