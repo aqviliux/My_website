@@ -1,13 +1,3 @@
-function init() {
-    prevBtn.addEventListener("click", function () {
-        previous();
-    });
-
-    nextBtn.addEventListener("click", function () {
-        next();
-    });
-}
-
 let currSelected = 0;
 const allImages = document.querySelectorAll(".gall-img");
 const prevBtn = document.querySelector(".prev");

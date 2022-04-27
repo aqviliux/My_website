@@ -85,13 +85,8 @@ function pick(cardNo) {
     output = boardStatus();
 
     if (output.every(checkFound)) {
-        const x = document.createElement("h3");
-        const list = x.classList;
-        x.innerText = "Congratulations!!!";
-        list.add("letCelebrate");
-        let div = document.getElementById("gridDIV");
-        div.insertAdjacentElement("beforebegin", x);
-        //document.body.appendChild(x);
+        let div = document.getElementsByClassName("divCelebrate")[0];
+        div.style.display = "flex";
     }
 }
 
