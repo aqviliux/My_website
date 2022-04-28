@@ -1,110 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--adapt screen to mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Akvile website</title>
+        <link href="./styles.css" rel="stylesheet" />
 
-<head>
-    <title>Akvile blog</title>
-    <link href="./styles.css" rel="stylesheet" type="text/css">
-</head>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
+    <body>
+        <nav class="topnav">
+            <a href="./index.html">About myself</a>
+            <a class="active" href="./blog.html">About orchids</a>
+            <a href="./game.html">Memory game 🌸</a>
+            <a href="./project.html">My projects</a>
+        </nav>
 
-<body>
-
-    <div class="topnav">
-        <a href="./index.html">Home</a>
-        <a class="active" href="./blog.html">About orchids</a>
-        <a href="./project.html">My projects</a>
-        <input type="text" placeholder="Search.." name="search">
-    </div>
-
-
-    <h1>Welcome to my blog!</h1>
-    <br/>
-    <p class="text">I describe my orchids here in the blog entry.</p>
-
-    <div class="blog-entries">
-        <br/>
-        <p>You could check few names of orchids about which would you like to know more ;)</p>
-        <form>
-            <input type="checkbox" id="orchid1" name="orchid1" value="Phalaenopsis">
-            <label for="orchid1"> Phalaenopsis</label>
-            <br>
-
-            <input type="checkbox" id="orchid2" name="orchid2" value="Cattleya">
-            <label for="orchid2"> Cattleya</label>
-            <br>
-
-            <input type="checkbox" id="orchid3" name="orchid3" value="Vanda">
-            <label for="orchid3"> Vanda</label>
-            <br>
-
-            <input type="checkbox" id="orchid4" name="orchid4" value="Catasetum">
-            <label for="orchid4"> Catasetum</label>
-            <br>
-
-
-            <input type="checkbox" id="orchid5" name="orchid5" value="Oncidium">
-            <label for="orchid5"> Oncidium</label>
-            <br>
-
-            <input type="checkbox" id="orchid6" name="orchid6" value="Dendrobium">
-            <label for="orchid6"> Dendrobium</label>
-            <br>
-            <br>
-            <input type="submit" value="Submit" />
-        </form>
-
-    </div>
-</body>
-
-
-<div class="flex-container">
-    <div>
-        <h2>Psychopsis Mariposa Peloric</h2>
+        <h1>Welcome to my blog!</h1>
         <br />
-        <img class="orch-img" src="./images/IMG_8674.JPG" alt="One of them" />
-        <h3>Psychopsis Mariposa Peloric care </h3>
-        <p class="info-orch">Commonly nick-named the 'Giraffe Orchid', or Mariposa orchid (butterfly) Psychopsis are fantastic orchids that produce
-            flowers one after another on the same spike for 10-15 years. Never cut the flower spikes even if you should accidentally
-            break one as they can branch below the break and continue to flower. The flowers last about three weeks before
-            falling off and within another three weeks or so, another bud forms and repeats the process. Water as the potting
-            mix approaches dryness or just dries out. Grow as you would for a Phalaenopsis. this is particular variety is
-            the peloric form in which the petals have taken up the shape and size of the lip. This easy to grow and flower
-            plant will provide years of enjoyment. Use clean water low in mineral content for best results. Do not use softened
-            water as it contains salt.
-        </p>
-    </div>
-    <div>
-        <h2>Angraecum germinyanum</h2>
-        <br />
-        <img class="orch-img" src="./images/IMG_7965.JPG" alt="One of them" />
-        <h3>Angraecum germinyanum care</h3>
-        <p class="info-orch">A higher elevation Madagascar species from a cloud forest environment that has a pendulous growth habit, and shiny,
-            smooth leaves. The non-resupinate flowers have beautiful spidery petals offset neatly by the round somewhat large
-            disc shaped lip. The flowers have an excellent fragrance at night. These plants do best at cool to intermediate
-            temps and once they start flowering many spikes can be produced over a period of several months. Very easy to
-            grow and flower!</p>
-    </div>
-    <div>
-        <h2>Coelogyne usitana</h2>
-        <br />
-        <img class="orch-img" src="./images/IMG_8014.JPG" alt="One of them" />
-        <h3>Coelogyne usitana care</h3>
-        <p class="info-orch">Perhaps one of the most beautiful of the Coelogyne with white flowers and a chocolate-red lip. Fragrant. From the
-            Philippines. Described recently in 2001. Up to 20-inch flower spikes with 10 to 20 flowers. This blooms off and
-            on throughout the year. The flower spikes arch and hang downwards and produce a number of flowers over several
-            weeks one at a time. It is not unusual for the older leaves to be dying back as the newest growths flower.</p>
-    </div>
-    <div>
-        <h2>Rth. Shinfong Little Sun ‘Youngmin Golden Boy’</h2>
-        <br />
-        <img class="orch-img" src="./images/IMG_7947.JPG" alt="One of them" />
-        <h3>Rth. Shinfong Little Sun ‘Youngmin Golden Boy’ care</h3>
-        <p class="info-orch">Cattleya hybrid. These orchids need very bright light. Keep moist in summer seasons and do not allow mix to dry,
-            in winter keep the mix slight dry and reduce watering. Keep good air movement to avoid fungal growth. This plant
-            requires living room temperature.
-        </p>
-    </div>
-</div>
 
+        <h2>My hobbies</h2>
+        <ol>
+            <li>orchids</li>
+            <li>books</li>
+            <li>gardening</li>
+        </ol>
+        <br />
 
+        <div class="about-orchids">
+            <h2>My favorite species of orchids</h2>
+            <ul>
+                <li>
+                    <a
+                        href="https://en.wikipedia.org/wiki/Psychopsis"
+                        target="_blank"
+                        >Psychopsis</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://en.wikipedia.org/wiki/Phalaenopsis"
+                        target="_blank"
+                        >Phalaenopsis</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://en.wikipedia.org/wiki/Angraecum"
+                        target="_blank"
+                        >Angraecum</a
+                    >
+                </li>
+            </ul>
+            <br />
+        </div>
+
+        <h2>Information about some spiecies of the orchids</h2>
+
+        <div class="flex-container">
+            <div class="flex_child">
+                <h3>Psychopsis Mariposa Peloric</h3>
+                <img
+                    class="orch-img"
+                    src="./images/IMG_8674.JPG"
+                    alt="One of them"
+                />
+                <h4>Psychopsis Mariposa Peloric care</h4>
+                <p>
+                    Commonly nick-named the 'Giraffe Orchid', or Mariposa orchid
+                    (butterfly) Psychopsis are fantastic orchids that produce
+                    flowers one after another on the same spike for 10-15 years.
+                    Never cut the flower spikes even if you should accidentally
+                    break one as they can branch below the break and continue to
+                    flower. The flowers last about three weeks before falling
+                    off and within another three weeks or so, another bud forms
+                    and repeats the process. Water as the potting mix approaches
+                    dryness or just dries out. Grow as you would for a
+                    Phalaenopsis. this is particular variety is the peloric form
+                    in which the petals have taken up the shape and size of the
+                    lip. This easy to grow and flower plant will provide years
+                    of enjoyment. Use clean water low in mineral content for
+                    best results. Do not use softened water as it contains salt.
+                </p>
+            </div>
+            <div class="flex_child">
+                <h3>Angraecum germinyanum</h3>
+                <img
+                    class="orch-img"
+                    src="./images/IMG_7965.JPG"
+                    alt="One of them"
+                />
+                <h4>Angraecum germinyanum care</h4>
+                <p>
+                    A higher elevation Madagascar species from a cloud forest
+                    environment that has a pendulous growth habit, and shiny,
+                    smooth leaves. The non-resupinate flowers have beautiful
+                    spidery petals offset neatly by the round somewhat large
+                    disc shaped lip. The flowers have an excellent fragrance at
+                    night. These plants do best at cool to intermediate temps
+                    and once they start flowering many spikes can be produced
+                    over a period of several months. Very easy to grow and
+                    flower!
+                </p>
+            </div>
+            <div class="flex_child">
+                <h3>Coelogyne usitana</h3>
+                <img
+                    class="orch-img"
+                    src="./images/IMG_8014.JPG"
+                    alt="One of them"
+                />
+                <h4>Coelogyne usitana care</h4>
+                <p>
+                    Perhaps one of the most beautiful of the Coelogyne with
+                    white flowers and a chocolate-red lip. Fragrant. From the
+                    Philippines. Described recently in 2001. Up to 20-inch
+                    flower spikes with 10 to 20 flowers. This blooms off and on
+                    throughout the year. The flower spikes arch and hang
+                    downwards and produce a number of flowers over several weeks
+                    one at a time. It is not unusual for the older leaves to be
+                    dying back as the newest growths flower.
+                </p>
+            </div>
+            <div class="flex_child">
+                <h3>Rth. Shinfong Little Sun ‘Youngmin Golden Boy’</h3>
+                <img
+                    class="orch-img"
+                    src="./images/IMG_7947.JPG"
+                    alt="One of them"
+                />
+                <h4>Rth. Shinfong Little Sun ‘Youngmin Golden Boy’ care</h4>
+                <p>
+                    Cattleya hybrid. These orchids need very bright light. Keep
+                    moist in summer seasons and do not allow mix to dry, in
+                    winter keep the mix slight dry and reduce watering. Keep
+                    good air movement to avoid fungal growth. This plant
+                    requires living room temperature.
+                </p>
+            </div>
+        </div>
+
+        <h2>Photos of my orchids</h2>
+
+        <div class="image-gallery">
+            <img
+                class="gall-img orch-img active"
+                src="./images/IMG_7965.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_8014.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_8674.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_5620.JPG"
+                alt="One of them"
+            />
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_5601.JPG"
+                alt="One of them"
+            />
+
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_5493.JPG"
+                alt="One of them"
+            />
+
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_5617.JPG"
+                alt="One of them"
+            />
+
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_7973.JPG"
+                alt="One of them"
+            />
+
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_8673.JPG"
+                alt="One of them"
+            />
+
+            <img
+                class="gall-img orch-img"
+                src="./images/IMG_8692.JPG"
+                alt="One of them"
+            />
+        </div>
+        <div class="btns">
+            <button disabled="" class="btn prev" onclick="previous()">
+                Prev
+            </button>
+            <button class="btn next" onclick="next()">Next</button>
+        </div>
+
+        <br />
+        <script src="blog_js.js"></script>
+    </body>
 </html>
