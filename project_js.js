@@ -28,7 +28,7 @@ function calcArea(radius) {
 
 function printArea(area) {
     console.log(Math.round(area * 100) / 100);
-    document.getElementById("getArea").innerHTML =
+    document.getElementById("getArea").innerText =
         "The area of the circle with radius " +
         radius +
         " meters is " +
@@ -210,7 +210,7 @@ function updateColor() {
 var places = ["Vilnius", "Kaunas", "Siauliai", "Klaipeda", "Taurage", "Utena"];
 
 function displayList() {
-    document.getElementById("citieslist").innerHTML = "";
+    document.getElementById("citieslist").innerText = "";
     var ul = document.getElementById("citieslist");
     for (var i = 0; i < places.length; i++) {
         var li = document.createElement("li");
@@ -252,7 +252,7 @@ var myTime = setInterval(showTime, 1000);
 function showTime() {
     let time = new Date();
     let t = time.toLocaleTimeString();
-    document.getElementById("clock").innerHTML = t;
+    document.getElementById("clock").innerText = t;
 }
 /*add clock */
 
@@ -269,8 +269,8 @@ var places2 = [
 ];
 
 function showArrays() {
-    document.getElementById("showArrays").innerHTML = places.join(", ");
-    document.getElementById("showArrays2").innerHTML = places2.join(", ");
+    document.getElementById("showArrays").innerText = places.join(", ");
+    document.getElementById("showArrays2").innerText = places2.join(", ");
 }
 
 /* function with parameter of array. The function should
@@ -286,7 +286,7 @@ function changeArray(list) {
 
 function reverseArrays() {
     var reverse = changeArray(places);
-    document.getElementById("showArrays3").innerHTML = reverse;
+    document.getElementById("showArrays3").innerText = reverse;
 }
 
 /* function with parameter of array. The function should
@@ -306,7 +306,7 @@ function concArray(list2) {
 
 function arrayToString() {
     var arrToStr = concArray(places);
-    document.getElementById("showArrays4").innerHTML = arrToStr;
+    document.getElementById("showArrays4").innerText = arrToStr;
 }
 
 /*compare two arrays and create array with unique values*/
@@ -327,7 +327,7 @@ function compareCities(first, second) {
 
 function compCities() {
     var unique = compareCities(places, places2);
-    document.getElementById("showArrays5").innerHTML = unique;
+    document.getElementById("showArrays5").innerText = unique;
 }
 
 /* Create a live coutdown with setInterval() that takes a datetime 
@@ -344,7 +344,7 @@ function showCountTime(aDate) {
     deltaTime -= minutes * 60;
     var seconds = Math.ceil(deltaTime % 60);
 
-    document.getElementById("countd").innerHTML =
+    document.getElementById("countd").innerText =
         days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     return (addDate - currentDate) / 1000;
 }
@@ -361,7 +361,7 @@ function runCountDown() {
             const distance = showCountTime(addDate);
             if (distance < 0) {
                 clearInterval(interval);
-                document.getElementById("countd").innerHTML = "TIME'S UP!";
+                document.getElementById("countd").innerText = "TIME'S UP!";
             }
         }, 1000);
     } else {
